@@ -59,8 +59,8 @@ class Scrapper:
         import json
         content_leaders_dict = leaders_country
         new_filename = "./leaders.json"
-        with open(new_filename, "w+") as file_leader:
-            json.dump(content_leaders_dict, file_leader)
+        with open(new_filename, "w+", encoding='utf8') as file_leader:
+            json.dump(content_leaders_dict, file_leader, indent=4, ensure_ascii=False)
     
     def main(self):
         '''This function calls the function save() using the function get_leaders() as parameter
